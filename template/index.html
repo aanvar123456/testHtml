@@ -683,15 +683,16 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="" class="sign-in-form">
+                <form action="login" class="sign-in-form">
+                {% csrf_token %}
                     <h2 class="title">Login</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="usuario" autocomplete="username" placeholder="Username" required="yes">
+                        <input type="text" name="username" autocomplete="username" placeholder="Username" required="yes">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="contraseña" autocomplete="current-password" placeholder="Password"
+                        <input type="password" name="password" autocomplete="current-password" placeholder="Password"
                             id="id_password" required="yes">
                         <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
                     </div>
@@ -727,11 +728,11 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" name="correo" autocomplete="email" placeholder="Email" required="yes">
+                        <input type="email" name="email" autocomplete="email" placeholder="Email" required="yes">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="contraseña" autocomplete="current-password" placeholder="Password"
+                        <input type="password" name="password" autocomplete="current-password" placeholder="Password"
                             id="id_reg" required="yes">
                         <i class="far fa-eye" id="toggleReg" style="cursor: pointer;"></i>
                     </div>
